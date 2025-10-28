@@ -1,9 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/eslint',
-    '@nuxt/ui'
-  ],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/supabase'],
 
   devtools: {
     enabled: true
@@ -17,6 +14,10 @@ export default defineNuxtConfig({
 
   compatibilityDate: '2025-01-15',
 
+  supabase: {
+    redirect: false
+  },
+
   eslint: {
     config: {
       stylistic: {
@@ -29,6 +30,9 @@ export default defineNuxtConfig({
   vite: {
     build: {
       sourcemap: false
+    },
+    optimizeDeps: {
+      include: ['cookie']
     }
   }
 })

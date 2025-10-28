@@ -25,6 +25,10 @@ export interface Instance {
   delayMin: number
   delayMax: number
   info?: string
+  existe: boolean
+  aluno: boolean
+  status_conta: 'trial' | 'ativa' | 'pendente' | 'cancelada' | 'vencida' | ''
+  uuid: string
 }
 
 export interface InstancesResponse {
